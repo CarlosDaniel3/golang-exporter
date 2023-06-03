@@ -6,7 +6,7 @@ import (
 
 	"github.com/pbnjay/memory"
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/prometheus/client_golang/promhttp"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
 func memoriaLivre() float64 {
@@ -21,23 +21,23 @@ func totalMemoria() float64 {
 
 var (
 	memoriaLivreBytesGauge = prometheus.NewGauge(prometheus.GaugeOpts{
-		Name: "memoria_livre_bytes"
-		Help: "Quantidade de memoria livre em bytes"
+		Name: "memoria_livre_bytes",
+		Help: "Quantidade de memoria livre em bytes",
 	})
 
 	memoriaLivreMegasGauge = prometheus.NewGauge(prometheus.GaugeOpts{
-		Name: "memoria_livre_megas"
-		Help: "Quantidade de memoria livre em megas"
+		Name: "memoria_livre_megas",
+		Help: "Quantidade de memoria livre em megas",
 	})
 
 	totalMemoryBytesGauge = prometheus.NewGauge(prometheus.GaugeOpts{
-		Name: "total_memoria_bytes"
-		Help: "Total de memoria em bytes"
+		Name: "total_memoria_bytes",
+		Help: "Total de memoria em bytes",
 	})
 
 	totalMemoryGigasGauge = prometheus.NewGauge(prometheus.GaugeOpts{
-		Name: "total_memoria_gigas"
-		Help: "Total de memoria em gigas"
+		Name: "total_memoria_gigas",
+		Help: "Total de memoria em gigas",
 	})
 )
 
